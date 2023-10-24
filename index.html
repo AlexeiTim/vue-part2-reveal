@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <style>
+        .text-small {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>Часто используемые директивы и взаимодействие компонентов</section>
+        <section>
+            <section><p>v-if</p></section>
+            <section>
+                <p>Директива v-if используется для отрисовки блока по условию. Блок будет отображаться только в том
+                    случае, если выражение директивы возвращает значение, приводимое к tru</p>
+                <img src="./img/v-if.png" alt="v-if">
+            </section>
+        </section>
+        <section>
+            <section>v-for</section>
+            <section>
+                <p>Отобразите элемент или блок шаблона несколько раз на основе исходных данных.</p>
+                <img src="./img/v-for.png" alt="v-for">
+            </section>
+        </section>
+        <section>
+            <section>Разбивка приложения на компоненты</section>
+            <section>
+                <p>Компоненты позволяют нам разделить пользовательский интерфейс на независимые и повторно используемые
+                    части и думать о каждой части отдельно. Обычно приложение организовано в виде дерева вложенных
+                    компонентов:</p>
+                <img src="./img/comp.png" alt="tree">
+            </section>
+            <section>
+                <img src="./img/components-tree.png" alt="components-tree">
+                <img src="./img/intoComp.png" alt="compoe">
+            </section>
+            <section>
+                <p>Props</p>
+                <img src="./img/defineProps.png" alt="defineProps">
+                <img src="./img/bind-props.png" alt="bind-props">
+            </section>
+            <section>
+                <p>emits</p>
+                <img src="./img/defineEmits.png" alt="emits">
+                <img src="./img/$emits.png" alt="emits">
+            </section>
+        </section>
+        <section>
+            <section>
+                <p>Хуки жизненного цикла компонента</p>
+                <table class="text-small">
+                    <thead>
+                    <tr>
+                        <th>Options API</th>
+                        <th>Хук внутри <code>setup</code></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>beforeCreate</code></td>
+                        <td>Не нужен*</td>
+                    </tr>
+                    <tr>
+                        <td><code>created</code></td>
+                        <td>Не нужен*</td>
+                    </tr>
+                    <tr>
+                        <td><code>beforeMount</code></td>
+                        <td><code>onBeforeMount</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>mounted</code></td>
+                        <td><code>onMounted</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>beforeUpdate</code></td>
+                        <td><code>onBeforeUpdate</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>updated</code></td>
+                        <td><code>onUpdated</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>beforeUnmount</code></td>
+                        <td><code>onBeforeUnmount</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>unmounted</code></td>
+                        <td><code>onUnmounted</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>errorCaptured</code></td>
+                        <td><code>onErrorCaptured</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>renderTracked</code></td>
+                        <td><code>onRenderTracked</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>renderTriggered</code></td>
+                        <td><code>onRenderTriggered</code></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    })
+</script>
+</body>
+</html>
